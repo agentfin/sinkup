@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Location:</b>
+  <%= @site.location %>
+</p>
+
+<p>
+  <b>Gps lat:</b>
+  <%= @site.gps_lat %>
+</p>
+
+<p>
+  <b>Gps lon:</b>
+  <%= @site.gps_lon %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @site.description %>
+</p>
+
+<p>
+  <b>Difficulty:</b>
+  <%= @site.difficulty %>
+</p>
+
+<p>
+  <b>Depth:</b>
+  <%= @site.depth %>
+</p>
+
+<p>
+  <b>Site type:</b>
+  <%= @site.site_type %>
+</p>
+
+<p>
+  <b>Sub type:</b>
+  <%= @site.sub_type %>
+</p>
+
+<p>
+  <b>Sink date:</b>
+  <%= @site.sink_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_site_path(@site) %> |
+<%= link_to 'Back', sites_path %>

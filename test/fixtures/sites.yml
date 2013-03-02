@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  location: MyString
+  gps_lat: 1.5
+  gps_lon: 1.5
+  description: MyString
+  difficulty: 1
+  depth: 1
+  site_type: MyString
+  sub_type: MyString
+  sink_date: 2013-03-01
+
+two:
+  location: MyString
+  gps_lat: 1.5
+  gps_lon: 1.5
+  description: MyString
+  difficulty: 1
+  depth: 1
+  site_type: MyString
+  sub_type: MyString
+  sink_date: 2013-03-01

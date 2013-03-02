@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @dife.user_id %>
+</p>
+
+<p>
+  <b>Site:</b>
+  <%= @dife.site_id %>
+</p>
+
+<p>
+  <b>Dive date:</b>
+  <%= @dife.dive_date %>
+</p>
+
+<p>
+  <b>Dive rating:</b>
+  <%= @dife.dive_rating %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @dife.comment %>
+</p>
+
+<p>
+  <b>Photo link:</b>
+  <%= @dife.photo_link %>
+</p>
+
+
+<%= link_to 'Edit', edit_dife_path(@dife) %> |
+<%= link_to 'Back', dives_path %>

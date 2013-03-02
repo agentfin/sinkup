@@ -1,0 +1,33 @@
+<h1>Listing dives</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Site</th>
+    <th>Dive date</th>
+    <th>Dive rating</th>
+    <th>Comment</th>
+    <th>Photo link</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dives.each do |dife| %>
+  <tr>
+    <td><%= dife.user_id %></td>
+    <td><%= dife.site_id %></td>
+    <td><%= dife.dive_date %></td>
+    <td><%= dife.dive_rating %></td>
+    <td><%= dife.comment %></td>
+    <td><%= dife.photo_link %></td>
+    <td><%= link_to 'Show', dife %></td>
+    <td><%= link_to 'Edit', edit_dife_path(dife) %></td>
+    <td><%= link_to 'Destroy', dife, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dive', new_dife_path %>

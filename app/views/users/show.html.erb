@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Username:</b>
+  <%= @user.username %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+<p>
+  <b>Bio:</b>
+  <%= @user.bio %>
+</p>
+
+<p>
+  <b>Pic url:</b>
+  <%= @user.pic_url %>
+</p>
+
+<p>
+  <b>Twitter handle:</b>
+  <%= @user.twitter_handle %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @user.age %>
+</p>
+
+<p>
+  <b>Dive count:</b>
+  <%= @user.dive_count %>
+</p>
+
+<p>
+  <b>Hometown:</b>
+  <%= @user.hometown %>
+</p>
+
+<p>
+  <b>Diver type:</b>
+  <%= @user.diver_type %>
+</p>
+
+<p>
+  <b>Diver level:</b>
+  <%= @user.diver_level %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

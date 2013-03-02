@@ -1,0 +1,41 @@
+<%= form_for(@dife) do |f| %>
+  <% if @dife.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dife.errors.count, "error") %> prohibited this dife from being saved:</h2>
+
+      <ul>
+      <% @dife.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :site_id %><br />
+    <%= f.number_field :site_id %>
+  </div>
+  <div class="field">
+    <%= f.label :dive_date %><br />
+    <%= f.date_select :dive_date %>
+  </div>
+  <div class="field">
+    <%= f.label :dive_rating %><br />
+    <%= f.number_field :dive_rating %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_field :comment %>
+  </div>
+  <div class="field">
+    <%= f.label :photo_link %><br />
+    <%= f.text_field :photo_link %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

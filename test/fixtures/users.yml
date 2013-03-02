@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  username: MyString
+  email: MyString
+  bio: MyString
+  pic_url: MyString
+  twitter_handle: MyString
+  age: 1
+  dive_count: 1
+  hometown: MyString
+  diver_type: MyString
+  diver_level: 1
+
+two:
+  username: MyString
+  email: MyString
+  bio: MyString
+  pic_url: MyString
+  twitter_handle: MyString
+  age: 1
+  dive_count: 1
+  hometown: MyString
+  diver_type: MyString
+  diver_level: 1
