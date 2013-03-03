@@ -43,17 +43,22 @@
                 <ul class="nav pull-right">
 
 
-
+                    <% if current_user.present? %>
                     <li><%= link_to 'DIVE SITES', sites_url %>
 
 
-                    <li><%= link_to 'MY PROFILE', sites_url %>
+                    <li><%= link_to 'MY PROFILE', user_path(current_user.id) %>
 
 
-                    <li><%= link_to "LOGOUT", sites_url, :method =>'delete' %></li>
 
-                  <li><%= link_to "LOGIN", sites_url, :method =>'get' %></li>
+                    <li><%= link_to "LOGOUT", logout_path, :method =>'delete' %></li>
+
+<% else %>
+               <li><%= link_to "LOGIN", sites_url, :method =>'get' %></li>
                   <li><%= link_to "REGISTER", sites_url, :method =>'get' %></li>
+<% end %>
+
+   
 
                 </ul>
             </div>

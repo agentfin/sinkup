@@ -1,6 +1,12 @@
 Sinkup::Application.routes.draw do
   
 
+
+  get "/login" => "sessions#new", as: 'login'
+  post "/sessions" => "sessions#create", as: 'sessions'
+  delete "/sessions/" => "sessions#destroy", as: 'logout'
+  root :to => 'sessions#new'
+  
   resources :dives
   resources :sites
   resources :users

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130302033212) do
+ActiveRecord::Schema.define(:version => 20130303163726) do
 
   create_table "dives", :force => true do |t|
     t.integer  "user_id"
@@ -49,8 +49,9 @@ ActiveRecord::Schema.define(:version => 20130302033212) do
     t.string   "hometown"
     t.string   "diver_type"
     t.integer  "diver_level"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.string   "password_digest"
   end
 
 end

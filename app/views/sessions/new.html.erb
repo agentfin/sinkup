@@ -1,0 +1,25 @@
+<div align=center>
+
+<h2>Login to sinkup</h2>
+
+<div align='center'>
+  <% if flash[:alert] %>
+    <p class="alert alert-error"><%= flash[:alert] %></p>
+  <% end %>
+  <% if flash[:notice] %>
+    <p class="alert alert-success"><%= flash[:notice] %></p>
+  <% end %>
+</div>
+
+<%= form_tag "sessions" do %>
+	<%= label_tag :email %>
+	<%= text_field_tag :email, params[:email] %>
+	<%= label_tag :password %>
+	<%= password_field_tag :password %>
+	<br>
+	<%= submit_tag "Log In", disable_with: "Submitting...", :class => "btn btn-primary" %>
+  <%= link_to "Register", new_user_url, disable_with: "Submitting...", :class => "btn btn-primary" %>
+<% end %>
+
+
+</div>
