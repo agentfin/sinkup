@@ -1,4 +1,4 @@
-<%= form_for(@site) do |f| %>
+<%= simple_form_for(@site) do |f| %>
   <% if @site.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@site.errors.count, "error") %> prohibited this site from being saved:</h2>
@@ -15,14 +15,7 @@
     <%= f.label :location %><br />
     <%= f.text_field :location %>
   </div>
-  <div class="field">
-    <%= f.label :gps_lat %><br />
-    <%= f.text_field :gps_lat %>
-  </div>
-  <div class="field">
-    <%= f.label :gps_lon %><br />
-    <%= f.text_field :gps_lon %>
-  </div>
+ 
   <div class="field">
     <%= f.label :description %><br />
     <%= f.text_field :description %>
@@ -37,16 +30,13 @@
   </div>
   <div class="field">
     <%= f.label :site_type %><br />
-    <%= f.text_field :site_type %>
+    <%= f.input :site_type, :collection => SITE_TYPES %>
   </div>
   <div class="field">
     <%= f.label :sub_type %><br />
-    <%= f.text_field :sub_type %>
+    <%= f.input :sub_type , :collection => SUB_TYPES%>
   </div>
-  <div class="field">
-    <%= f.label :sink_date %><br />
-    <%= f.date_select :sink_date %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

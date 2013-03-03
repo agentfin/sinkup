@@ -1,10 +1,8 @@
 Sinkup::Application.routes.draw do
+  
+
   resources :dives
-
-
   resources :sites
-
-
   resources :users
 
 

@@ -1,14 +1,76 @@
 <!DOCTYPE html>
+
+
+
 <html>
+
 <head>
-  <title>Sinkup</title>
+
+	  <title>Devlog</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "bootstrap", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+	<title>Business Template</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <!-- Styles -->
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
-<body>
+<body style="padding-top: 0px;width: 1200px;margin-left: auto; margin-right:auto">
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+
+            <%= link_to 'SINKUP', sites_url, :class=>"brand" %>
+
+
+
+
+            <div class="nav-collapse collapse">
+                <ul class="nav pull-right">
+
+
+
+                    <li><%= link_to 'DIVE SITES', sites_url %>
+
+
+                    <li><%= link_to 'MY PROFILE', sites_url %>
+
+
+                    <li><%= link_to "LOGOUT", sites_url, :method =>'delete' %></li>
+
+                  <li><%= link_to "LOGIN", sites_url, :method =>'get' %></li>
+                  <li><%= link_to "REGISTER", sites_url, :method =>'get' %></li>
+
+                </ul>
+            </div>
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+<div style='margin-left:50px'>
+<br />
 
 <%= yield %>
+</div>
 
-</body>
-</html>
+
+
+ 
