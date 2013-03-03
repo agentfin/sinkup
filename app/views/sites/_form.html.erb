@@ -11,31 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :location %><br />
-    <%= f.text_field :location %>
-  </div>
- 
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :difficulty %><br />
-    <%= f.number_field :difficulty %>
-  </div>
-  <div class="field">
-    <%= f.label :depth %><br />
-    <%= f.number_field :depth %>
-  </div>
-  <div class="field">
-    <%= f.label :site_type %><br />
+
+
+    <%= f.input :location %>
+    <%= f.input :description %>
+    <%= f.input :difficulty %>
+    <%= f.input :depth %>
     <%= f.input :site_type, :collection => SITE_TYPES %>
-  </div>
-  <div class="field">
-    <%= f.label :sub_type %><br />
     <%= f.input :sub_type , :collection => SUB_TYPES%>
-  </div>
+ 
 
   <div class="actions">
     <%= f.submit %>
